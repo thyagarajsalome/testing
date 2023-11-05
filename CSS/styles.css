@@ -5,6 +5,8 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --color-border:#ccc;
+  --border-radius: 30px;
 }
 
 *, *::after, *::before {
@@ -157,6 +159,7 @@ margin-bottom: 1rem;
 }
 .icon--primary {
   fill: var(--color-primary)
+  
 
 }
 .icon-container {
@@ -164,8 +167,12 @@ margin-bottom: 1rem;
   width: 64px;
   height: 64px;
   border-radius: 100%;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  
+  
+  
 }
 /* Buttons */
 .btn {
@@ -216,7 +223,7 @@ background: #00c8eb;
 }
 /* Inputs */
 .input {
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   border: 1px solid #ccc;
   color: var(--color-headings);
   font-size: 2rem;
@@ -226,6 +233,21 @@ background: #00c8eb;
 ::placeholder {
   color: #cdcbd7;
 }
+
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+  }
+  .input-group .btn {
+    margin: 4px;
+  }
+
 @media screen and (min-width:1024px) {
   
   .input {
