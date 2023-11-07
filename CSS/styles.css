@@ -200,10 +200,18 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .btn--primary {
@@ -283,7 +291,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -583,7 +591,6 @@ a {
 
 .block__heading {
   margin-top: 0;
-  
 }
 
 .block--dark {
@@ -655,7 +662,7 @@ a {
   transform: translateY(5px);
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .nav__toggler {
     display: none;
   }
@@ -699,3 +706,32 @@ a {
     align-self: center;
   }
 }
+
+/* Domain Block */
+/* Styling for the Domain Block input group */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee; /* Adds a shadow to the input group */
+  border: 0; /* Removes the border */
+  margin: 4rem auto; /* Sets margin space around the input group */
+  max-width: 670px; /* Limits the maximum width of the input group */
+}
+
+/* Styling for the prices list within the Domain Block */
+.block-domain__prices {
+  display: grid; /* Sets the display property to grid for the list */
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns in the grid */
+  grid-template-rows: repeat(2, 6rem); /* Creates 2 rows with a height of 6rem each */
+  font-size: 2rem; /* Sets the font size to 2rem */
+  font-weight: 600; /* Sets the font weight to 600 (bold) */
+  justify-items: center; /* Centers items horizontally in the grid */
+  max-width: 700px; /* Limits the maximum width of the price list */
+  margin: 0 auto; /* Centers the price list horizontally on the page */
+}
+
+/* Media query for screens with a minimum width of 768px */
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Adjusts the grid columns for larger screens */
+  }
+}
+
